@@ -21,6 +21,12 @@ If you make use of the catalogs as part of a publication, we ask that you please
 
 - C. Holm-Hansen, Y. Chen, & O.Y. Gnedin (2025). *Catalog of Mock Stellar Streams in Milky Way-like Galaxies* OJAp, [insert links when available]
 
+To access the catalogs, you will need `numpy` and `h5py`, which can both be installed with `pip`:
+
+```bash
+pip install numpy h5py
+```
+
 
 ## Download Instructions
 
@@ -41,7 +47,7 @@ Each file can be loaded in using `h5py`:
 f = h5py.File(root + "cluster_info.hdf5", "r")
 ```
 
-`f` will now contain keys starting from 0 and going up to the number of streams in the current chosen halo. Each key represents an individual stream.
+`f` will now contain keys starting from 0 and going up to the number of streams in the current chosen halo. Each key represents an individual stream. For more details see the `example.ipynb` notebook.
 
 The available data for each stream and their units are described below.
 
@@ -63,4 +69,25 @@ The available data for each stream and their units are described below.
 | Txz | Gyr $^{-2}$ | Tidal tensor xz component |
 | Tyz | Gyr $^{-2}$ | Tidal tensor yz component |
 | age | Gyr | Age of the cluster in Gyr |
-| feh | dex | $\rm [Fe/H]$ of the cluster
+| feh | dex | $\rm [Fe/H]$ of the cluster |
+
+
+All quantities except age and feh are (1000,) numpy arrays which give the values over the 3.5 Gyr orbit in the time-evolving BFE potential.
+
+`stream_catalog.hdf5` contains information about individual stream stars and is organized in the same manner. The available properties for each stream, as well as their units, are as follows:
+
+
+| Name | Units | Description |
+|:----------|----------|----------|
+| x  | kpc  | Galactocentric x coordinate  |
+| y  | kpc  | Galactocentric y coordinate  |
+| z  | kpc  | Galactocentric z coordinate  |
+| vx  | km/s  | Galactocentric vx coordinate  |
+| vy  | km/s  | Galactocentric vy coordinate |
+| vz  | km/s  | Galactocentric vz coordinate  |
+| mass | $M_{\odot}$ | stellar mass |
+| ejection_time | Gyr | How long ago a given star left the cluster |
+| energy | kpc $^{2}$ / Myr $^{2}$ | Energy of the star's orbit at the present time |
+
+
+
