@@ -27,6 +27,8 @@ To access the catalogs, you will need `numpy` and `h5py`, which can both be inst
 pip install numpy h5py
 ```
 
+while not needed to use the catalogs, the analysis notebook also uses `matplotlib` and `astropy`.
+
 
 ## Download Instructions
 
@@ -37,21 +39,21 @@ Please note that each catalog is ~2-3 GBs, and downloading all 4 catalogs will t
 
 ## Catalog Description
 
-Each halo consists of two `.hdf5` files: a smaller file, titled `cluster_info.hdf5`, and a larger file, `stream_catalog.hdf5`.
+Each halo consists of two `.hdf5` files: a smaller file, titled `halo_id_clusters.hdf5`, and a larger file, `halo_id_catalog.hdf5`, where `halo_id` is replaced by the respective id of the cosmological halo used (e.g., m12i, 523889, etc.)
 
-`cluster_info.hdf5` contains information about the progenitor globular cluster and its orbit. `stream_catalog.hdf5` contains the individual stars in each stream, as well as their properties.
+`halo_id_clusters.hdf5` contains information about the progenitor globular clusters and their orbits. `halo_id_streams.hdf5` contains the individual stars in each stream, as well as their properties.
 
 Each file can be loaded in using `h5py`:
 
 ``` python
-f = h5py.File(root + "cluster_info.hdf5", "r")
+f = h5py.File(root + "523889_streams.hdf5", "r")
 ```
 
 `f` will now contain keys starting from 0 and going up to the number of streams in the current chosen halo. Each key represents an individual stream. For more details see the `example.ipynb` notebook.
 
 The available data for each stream and their units are described below.
 
-`cluster_info.hdf5` contains the following:
+`halo_id_clusters.hdf5` contains the following:
 
 | Name | Units | Description |
 |:----------|----------|----------|
@@ -74,7 +76,7 @@ The available data for each stream and their units are described below.
 
 All quantities except age and feh are (1000,) numpy arrays which give the values over the 3.5 Gyr orbit in the time-evolving BFE potential.
 
-`stream_catalog.hdf5` contains information about individual stream stars and is organized in the same manner. The available properties for each stream, as well as their units, are as follows:
+`halo_id_streams.hdf5` contains information about individual stream stars and is organized in the same manner. The available properties for each stream, as well as their units, are as follows:
 
 
 | Name | Units | Description |
