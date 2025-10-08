@@ -32,7 +32,7 @@ while not needed to use the catalogs, the analysis notebook also uses `matplotli
 
 ## Download Instructions
 
-The catalogs will be made publicly available on Zenodo once the paper has been accepted to OJAp. Please contact the authors if you wish to access the catalogs before then.
+The catalogs will be made publicly available on Zenodo once the paper has been accepted to OJAp. Once accepted the link will be added here. Please contact the authors if you wish to access the catalogs before then.
 
 Please note that the files for each halo are ~2-3 GBs, and downloading all 4 halos will take up about 10 GB of storage space. Users should ensure they have enough storage available before downloading all 4 halos.
 
