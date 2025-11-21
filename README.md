@@ -32,7 +32,7 @@ while not needed to use the catalogs, the analysis notebook also uses `matplotli
 
 ## Download Instructions
 
-The catalogs are publicly available to download through Zenodo via this [link.](https://zenodo.org/records/17537182)
+The catalogs are publicly available to download through Zenodo via this [link.](https://zenodo.org/records/17672873)
 
 Please note that the files for each halo are ~2-3 GBs, and downloading all 4 halos will take up about 10 GB of storage space. Users should ensure they have enough storage available before downloading all 4 halos.
 
