@@ -39,7 +39,7 @@ Please note that the files for each halo are ~2-3 GBs, and downloading all 4 hal
 
 ## Catalog Description
 
-Each halo consists of two `.hdf5` files: a smaller file, titled `halo_id_clusters.hdf5`, and a larger file, `halo_id_catalog.hdf5`, where `halo_id` is replaced by the respective id of the cosmological halo used (e.g., m12i, 523889, etc.)
+Each halo consists of two `.hdf5` files: a smaller file, titled `halo_id_clusters.hdf5`, and a larger file, `halo_id_streams.hdf5`, where `halo_id` is replaced by the respective id of the cosmological halo used (e.g., m12i, 523889, etc.)
 
 `halo_id_clusters.hdf5` contains information about the progenitor globular clusters and their orbits. `halo_id_streams.hdf5` contains the individual stars in each stream, as well as their properties.
 
@@ -76,7 +76,7 @@ The available data for each stream and their units are described below.
 
 All quantities except age and feh are numpy arrays which give the values over the 3.5 Gyr orbit in the time-evolving BFE potential. Age and feh are scalar values.
 
-`halo_id_streams.hdf5` contains information about individual stream stars and is organized in the same manner. The available properties for each stream, as well as their units, are as follows:
+`halo_id_streams.hdf5` contains information about individual stream stars and is organized in the same manner. The available properties for each stream star, as well as their units, are as follows:
 
 
 | Name | Units | Description |
